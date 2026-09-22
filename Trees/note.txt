@@ -1,0 +1,24 @@
+
+INSERTION IN CBT 
+
+for(int i=0;i<values.size();i++){
+   insertionCBT(root,values[i],q);
+}
+
+newNode = newNode(value);
+if(root == NULL){
+   root = newNode;
+   q.push(root);
+}
+node * curr = q.front();
+if(curr->left == NULL){
+   curr->left=newNode;
+}
+else if(curr->right == NULL){
+   curr->right=newNode;
+   q.pop();
+}
+q.push(newNode);
+return root;
+
+array will be passed for this insertion of CBT
